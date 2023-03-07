@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Welcome to my page!</h2>
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <h2>Welcome to my ToDoApp!</h2>
+    </div>
+</div>
+    
+    
+{% for task in tasks %}
+    <h4>{{task.title}}</h4>
+    <p>{{task.description}}</p>
+{% endfor %}
+        
 {% endblock content %}
