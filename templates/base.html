@@ -1,10 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" /> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load django_bootstrap5 %}
+    {% load bootstrap5 %}
 
     {% bootstrap_css %}
 
@@ -14,8 +16,17 @@
     <title>ToDoIt</title>
 </head>
 <body>
-    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center">
+                {% block content %}
     
-    {% endblock content %}
+                {% endblock content %}
+            </div>
+            
+        </div>
+        
+    </div>
+    
 </body>
 </html>
