@@ -1,0 +1,16 @@
+.row-width {
+    width: 700px;
+}
+
+.box {
+    border: 0.75px solid white;
+    border-radius: 10px;
+}
+
+.border-bottom {
+    border-bottom: 0.75px solid white;
+}
+
+.border-bottom-last {
+    border-bottom: 0.75px solid transparent;
+}
