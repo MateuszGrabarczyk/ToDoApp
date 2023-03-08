@@ -17,11 +17,7 @@
                 {% for task in tasks %}
                 <div class="row">
                     <div class="col">
-                        {% if forloop.last %}
-                            <h4 class="py-1 m-0">{{task.title}}</h4>
-                        {% else %}
-                            <h4 class="py-1 m-0">{{task.title}}</h4>
-                        {% endif %}
+                            <a href="{% url 'task-detail' task.pk %}"><h4 class="py-1 m-0">{{task.title}}</h4></a>
                     </div>
                     <div class="col">
                         <div class="d-flex justify-content-end">

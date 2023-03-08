@@ -11,6 +11,8 @@ def index(request):
 
 class TaskDetail(DetailView):
 	model = Task
+	template_name = "toDoIt/task_detail.html"
+	context_object_name = "task"
 
 class TaskCreate(CreateView):
 	model = Task

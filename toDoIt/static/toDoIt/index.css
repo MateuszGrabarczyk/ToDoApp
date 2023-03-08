@@ -19,3 +19,7 @@ img {
     width: 20px;
     height: 20px;
 }
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
