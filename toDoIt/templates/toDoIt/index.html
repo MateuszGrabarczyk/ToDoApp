@@ -11,16 +11,27 @@
         <h2>Welcome to my ToDoApp!</h2>
     </div>
 
-    <div class="row mt-5">
+    <div class="row mt-4">
         <div class="d-flex justify-content-center">
-            <div class="row row-width box">
+            <div class="row row-width m-0">
                 {% for task in tasks %}
-                    {% if forloop.last %}
-                        <h4 class="py-1 m-0 border-bottom-last">{{task.title}}</h4>
-                    {% else %}
-                        <h4 class="py-1 m-0 border-bottom">{{task.title}}</h4>
-                    {% endif %}
+                <div class="row">
+                    <div class="col">
+                        {% if forloop.last %}
+                            <h4 class="py-1 m-0">{{task.title}}</h4>
+                        {% else %}
+                            <h4 class="py-1 m-0">{{task.title}}</h4>
+                        {% endif %}
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-end ">
+                            <img src="static/close.svg" alt="Close icon" class="mt-2 icon">
+                        </div>
+                    </div>
+                    <hr class="my-1">
+                </div>    
                 {% endfor %}
+                
             </div>
         </div>
     </div>
@@ -29,9 +40,6 @@
 <div class="d-flex justify-content-center mt-3">
     <a class="btn btn-light" href="{% url 'task-create' %}">Add new task</a>
 </div>
-
-    
     
 
-        
 {% endblock content %}
