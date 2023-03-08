@@ -21,11 +21,15 @@
                         <h4 class="py-1 m-0 border-bottom">{{task.title}}</h4>
                     {% endif %}
                 {% endfor %}
-            </div>    
+            </div>
         </div>
     </div>
-    
+        
 </div>
+<div class="d-flex justify-content-center mt-3">
+    <a class="btn btn-light" href="{% url 'task-create' %}">Add new task</a>
+</div>
+
     
     
 

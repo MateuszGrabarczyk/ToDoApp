@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+
+{% block css %}{% endblock css %}
+
+{% block content %}
+    <div class="container" style="max-width: 900px">
+        <form method="post" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-light">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
