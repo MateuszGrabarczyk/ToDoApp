@@ -26,4 +26,5 @@ class TaskUpdate(UpdateView):
 class TaskDelete(DeleteView):
 	model = Task
 	context_object_name = 'task'
-	success_url = reverse_lazy('')
+	success_url = reverse_lazy('tasks')
+	template_name = "toDoIt/task_delete.html"
